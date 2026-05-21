@@ -1,0 +1,20 @@
+[user]
+	name = Pawel Szczur
+[alias]
+	c = checkout
+	b = branch
+	s = status
+	d = diff
+	l = log
+	unstage = reset HEAD --
+	cb = rev-parse --abbrev-ref HEAD
+	bl = branch --sort=-committerdate
+[push]
+	autoSetupRemote = true
+[core]
+	autocrlf = input
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
